@@ -1,9 +1,4 @@
-import React from 'react'
+import { createContext } from "react";
+const MovieContext= createContext(null)
 
-const MoviesProvider = () => {
-  return (
-    <div>MoviesProvider</div>
-  )
-}
-
-export default MoviesProvider
+export default MovieContext

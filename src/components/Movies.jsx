@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useContext} from "react";
+import MovieComponent from "./MovieComponent";
+import { nanoid } from "nanoid";
+import MovieContext from "../Utils/MoviesProvider";
 
 const Movies = () => {
-  return (
-    <div>Movies</div>
-  )
-}
+  const movies = useContext(MovieContext)
+  return movies.map((item) => <MovieComponent {...item} key={nanoid()} />);
+};
 
-export default Movies
+export default Movies;
